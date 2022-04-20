@@ -1,4 +1,4 @@
-package SeParactice.SeParactice;
+package SePractice.BaseClasses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
