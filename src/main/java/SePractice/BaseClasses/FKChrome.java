@@ -1,10 +1,23 @@
 package SePractice.BaseClasses;
 
-public class ChromeClass extends MyBrowser {
+import org.openqa.selenium.chrome.ChromeDriver;
 
-	public ChromeClass(String url, String browserType) {
-		super(url, browserType);
+public class FKChrome extends FKBrowser {
+
+	public FKChrome() {
+		super();
+		System.setProperty("webdriver.chrome.driver", "./Drivers\\chromedriver.exe");
+		setDriver(new ChromeDriver());
 		
+		driver.manage().window().maximize();
 	}
 
+	
+	public FKChrome(String url) {
+		super(url);
+		System.setProperty("webdriver.chrome.driver", "./Drivers\\chromedriver.exe");
+		setDriver(new ChromeDriver());
+		
+		driver.manage().window().maximize();
+	}
 }
