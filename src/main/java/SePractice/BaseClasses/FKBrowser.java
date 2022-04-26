@@ -68,6 +68,4 @@ public class FKBrowser {
 		elmt.click();
 		
 	}
-	
-
 }
