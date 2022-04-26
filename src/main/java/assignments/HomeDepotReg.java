@@ -1,22 +1,15 @@
 package assignments;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
-
-import SePractice.BaseClasses.FKChrome;
-import SePractice.BaseClasses.FKEdge;
+import SePractice.BaseClasses.FKBrowser;
 
 public class HomeDepotReg {
-	static FKEdge browser = new FKEdge("Https://homedepot.com");
+
+	static FKBrowser browser = new FKBrowser("Https://homedepot.com", "chrome");
 
 	public static void main(String[] args) throws InterruptedException {
 		browser.Open(); // WebDriver setup
+
 		browser.click(By.linkText("My Account")); // click on My account link
 
 		Thread.sleep(6000);
@@ -36,12 +29,12 @@ public class HomeDepotReg {
 		browser.click(By.xpath(
 				"//body/div[@id='single-signin']/div[@id='outer']/div[@id='single-signin__body']/div[1]/div[2]/form[1]/div[5]/div[1]/div[1]/label[1]"));
 
-		browser.getDriver().switchTo().frame(browser.getDriver().findElement(
-				By.xpath("//*[@id=\"single-signin__body\"]/div/div[2]/form/div[7]/div/div/div/div/iframe")));
+	//	browser.getDriver().switchTo().frame(browser.getDriver().findElement(
+			//	By.xpath("//*[@id=\"single-signin__body\"]/div/div[2]/form/div[7]/div/div/div/div/iframe")));
 
-		browser.getDriver().findElement(By.id("recaptcha-anchor-label")).click();
-
-		browser.click(By.id("registrationCreateAnAccountButton"));
+		//browser.getDriver().findElement(By.id("recaptcha-anchor-label")).click();
+		
+		browser.click(By.xpath("//*[@id='single-signin__body']/div/div[2]/form/button/span"));
 
 	}
 

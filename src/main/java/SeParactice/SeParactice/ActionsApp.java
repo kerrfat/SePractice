@@ -11,15 +11,11 @@ import SePractice.BaseClasses.FKChrome;
 public class ActionsApp {
 
 	public static void main(String[] args) throws InterruptedException {
-		FKChrome Chrome = new FKChrome();
-		WebDriver dr = Chrome.getDriver();
+		FKBrowser Chrome = new FKBrowser("chrome");
+		
 		
 		Chrome.Open("https://amazon.com");
 		
-		 Actions act =new Actions(dr);
-		 WebElement hover = dr.findElement(By.id("nav-link-accountList-nav-line-1"));
-		 act.moveToElement(hover).build().perform();
-		Thread.sleep(6000);
 		
 		Chrome.Quit();
 		};
