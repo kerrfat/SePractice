@@ -1,9 +1,5 @@
 package SePractice.BaseClasses;
 
-import java.io.IOException;
-import java.io.InvalidObjectException;
-
-import javax.xml.xpath.XPath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
@@ -11,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -46,6 +43,13 @@ public class FKBrowser {
 			System.setProperty("webdriver.edge.driver", "./Drivers\\msedgedriver.exe");
 
 			this.driver = new EdgeDriver();
+		}
+		else if (webdriverType.equalsIgnoreCase("firefox"))
+		{
+			System.setProperty("webdriver.gecko.driver", "./Drivers\\geckodriver.exe");
+
+			this.driver = new FirefoxDriver();
+			
 		}
 		this.driver.manage().window().maximize();
 		

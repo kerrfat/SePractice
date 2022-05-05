@@ -5,7 +5,7 @@ import SePractice.BaseClasses.FKBrowser;
 
 public class HomeDepotReg {
 
-	static FKBrowser browser = new FKBrowser("Https://homedepot.com", "chrome");
+	static FKBrowser browser = new FKBrowser("Https://homedepot.com", "msedge"); // chrome or msedge
 
 	public static void main(String[] args) throws InterruptedException {
 		browser.Open(); // WebDriver setup
@@ -13,7 +13,7 @@ public class HomeDepotReg {
 		browser.click(By.linkText("My Account")); // click on My account link
 
 		Thread.sleep(6000);
-		browser.click(By.xpath("//span[contains(text(),'Register')]")); // go to register oage
+		browser.click(By.xpath("//span[contains(text(),'Register')]")); // go to register page
 
 		// select personal account
 		browser.click(By.xpath(

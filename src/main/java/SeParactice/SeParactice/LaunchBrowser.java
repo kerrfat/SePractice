@@ -1,17 +1,19 @@
 package SeParactice.SeParactice;
 
 import org.openqa.selenium.By;
-import SePractice.BaseClasses.FKChrome;
+
+import SePractice.BaseClasses.FKBrowser;
+
 
 public class LaunchBrowser {
 
 	public static void main(String[] args) throws InterruptedException {
-		FKChrome Chrome = new FKChrome("https://www.amazon.com");
-		Chrome.Open();
-		Chrome.sendKey(By.xpath("/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[2]/div[1]/input"), "Laptop");
+		FKBrowser browser = new FKBrowser("https://www.amazon.com","firefox");
+		browser.Open();
+		browser.sendKey(By.xpath("/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[2]/div[1]/input"), "Laptop");
 		
-		Chrome.click(By.xpath("//*[@id=\"nav-search-submit-button\"]"));
+		browser.click(By.xpath("//*[@id=\"nav-search-submit-button\"]"));
 		Thread.sleep(6000);
-		Chrome.Quit();
+		browser.Quit();
 	};
 }

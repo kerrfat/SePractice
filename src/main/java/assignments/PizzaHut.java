@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import SePractice.BaseClasses.FKBrowser;
 
 public class PizzaHut {
-	static FKBrowser browser = new FKBrowser("Https://pizzahut.com", "chrome");
+	static FKBrowser browser = new FKBrowser("Https://pizzahut.com", "chrome"); //chrome or msedge
 
 	public static void main(String[] args) throws InterruptedException {
 		browser.Open();
