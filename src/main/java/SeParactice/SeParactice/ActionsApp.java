@@ -14,7 +14,7 @@ public class ActionsApp {
 		browser.Open("https://amazon.com");
 		
 		
-		browser.Quit();
+		
 		};
 
 	}
